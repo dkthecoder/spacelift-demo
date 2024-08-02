@@ -1,6 +1,5 @@
 provider "aws" {
   region  = "us-east-1"
-  profile = "default"  # Corrected typo from "defualt" to "default"
 }
 
 resource "aws_s3_bucket" "example" {
