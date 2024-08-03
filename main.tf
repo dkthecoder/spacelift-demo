@@ -1,9 +1,9 @@
 provider "aws" {
-  region  = "us-east-1"
+  region  = "eu-west-2"
 }
 
 resource "aws_s3_bucket" "example" {
-  bucket = "my-example-bucket-1"
+  bucket = "my-example-bucket-${random_id.random.prefix}"
 }
 
 resource "aws_s3_bucket_acl" "example_acl" {
