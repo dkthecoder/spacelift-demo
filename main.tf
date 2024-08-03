@@ -7,3 +7,4 @@ resource "aws_s3_bucket" "example" {
 }
 
 resource "random_uuid" "uuid" {}
+# cool comment
