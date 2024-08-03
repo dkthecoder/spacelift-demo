@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "example" {
-  bucket = "my-example-bucket-1"
+  bucket = "my-example-bucket-${random_uuid.uuid.result}"
 }
 
 resource "aws_s3_bucket_acl" "example_acl" {
@@ -11,6 +11,4 @@ resource "aws_s3_bucket_acl" "example_acl" {
   acl    = "private"
 }
 
-resource "random_id" "random" {
-  byte_length = 4
-}
+resource "random_uuid" "uuid" {}
