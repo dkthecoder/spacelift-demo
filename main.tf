@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "example" {
-  bucket = "my-example-bucket-${random_id.random.prefix}"
+  bucket = "my-example-bucket-1"
 }
 
 resource "aws_s3_bucket_acl" "example_acl" {
